@@ -6,6 +6,7 @@
 * [link download - x86_64-posix-sjlj](https://sourceforge.net/projects/mingw-w64/files/?source=navbar)
 
 ____
+### config
 ```
 1. mkdir /mybuild/build_debug
 2. cd /build_debug

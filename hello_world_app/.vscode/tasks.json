@@ -1,0 +1,67 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "cmake_release",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/build_release"
+            },
+            "command": "cmake",
+            "args": [
+                "-G",
+                "MinGW Makefiles",
+                "-DCMAKE_BUILD_TYPE=Release",
+                "./../"
+            ]
+        },
+        {
+            "label": "cmake_debug",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/build_debug"
+            },
+            "command": "cmake",
+            "args": [
+                "-G",
+                "MinGW Makefiles",
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "./../"
+            ],
+           
+        },
+        {
+            "label": "build_release",
+            "options": {
+                "cwd": "${workspaceRoot}/build_release/"
+            },
+            "command": "cmake",
+            "args": [
+                "--build",
+                "./../build_release",
+                "--config",
+                "Release"
+                
+            ]
+        },
+        {
+            "label": "build_debug",
+            "options": {
+                "cwd": "${workspaceRoot}/build_debug/"
+            },
+            "command": "cmake",
+            "args": [
+                "--build",
+                ".",
+                "--config",
+                "Debug"
+                
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+       
+    ]
+}

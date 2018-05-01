@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "name": "Win64",
+            "intelliSenseMode": "clang-x64",
+            "includePath": [
+                "${workspaceRoot}",
+                "D:/mingw-w64/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/",
+                "D:/mingw-w64/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/",
+                "D:/mingw-w64/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward/",
+                "D:/mingw-w64/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/",
+                "D:/mingw-w64/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed/",
+                "D:/mingw-w64/mingw64/x86_64-w64-mingw32/include/",
+                "${workspaceRoot}../../test_lib/src/"
+               
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "__GNUC__=6",
+                "__cdecl=__attribute__((__cdecl__))"
+            ],
+            "browse": {
+                "path": [
+                    "D:/mingw-w64/mingw64/include",
+                    "D:/mingw-w64/mingw64"
+                  
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        }
+    ],
+    "version": 3
+}

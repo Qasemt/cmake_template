@@ -3,15 +3,15 @@ cmake_minimum_required (VERSION 3.0.0)
 project (vs_test)
 
 if (MINGW)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "./../../../out/mingw/release")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG  "./../../../out/mingw/debug")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "./../../out/mingw/release")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG  "./../../out/mingw/debug")
 
 elseif (MSVC)
 
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "./../../../out/vs64/release")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG  "./../../../out/vs64/debug")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "./../../out/vs64/release")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG  "./../../out/vs64/debug")
 endif()
 
 

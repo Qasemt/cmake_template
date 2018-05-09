@@ -30,7 +30,7 @@
             "preLaunchTask": "vs64_build_release",
         },
         {
-            "name": "MINGW_ DEBUG RUN",
+            "name": "MINGW_DEBUG_RUN",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/out/mingw/debug/vs_test.exe",
@@ -51,7 +51,7 @@
             "preLaunchTask": "mingw_build_debug",
         },
         {
-            "name": "MINGW_ RELEASE RUN",
+            "name": "MINGW_RELEASE_RUN",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/out/mingw/release/vs_test.exe",

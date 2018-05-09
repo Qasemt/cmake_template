@@ -1,0 +1,97 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+         {
+            "label": "vs64_conf",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/mybuild/vs64/"
+            },
+            "command": "cmake",
+            "args": [
+                "-G",
+                "Visual Studio 11 2012 Win64",
+                   "-Dconf_BUILD_TYPE=Debug",
+                "./../../"
+            ],
+           
+        },
+         {
+            "label": "mingw_conf",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/mybuild/mingw/"
+            },
+            "command": "cmake",
+            "args": [
+                "-G",
+                "MinGW Makefiles",
+                   "-DCMAKE_BUILD_TYPE=Debug",
+                "./../../"
+            ],
+           
+        },
+        {
+            "label": "vs64_build_release",
+            "options": {
+                "cwd": "${workspaceRoot}/mybuild/vs64/"
+            },
+            "command": "cmake",
+            "args": [
+                "--build",
+                ".",
+                "--config",
+                "Release"
+                    ]
+        },
+        {
+            "label": "vs64_build_debug",
+            "options": {
+                "cwd": "${workspaceRoot}/mybuild/vs64/"
+            },
+            "command": "cmake",
+            "args": [
+                "--build",
+                ".",
+                "--config",
+                "Debug"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+        ,
+        {
+            "label": "mingw_build_release",
+            "options": {
+                "cwd": "${workspaceRoot}/mybuild/mingw/"
+            },
+            "command": "cmake",
+            "args": [
+                "--build",
+                ".",
+                "--config",
+                "Release"
+                    ]
+        },
+        {
+            "label": "mingw_build_debug",
+            "options": {
+                "cwd": "${workspaceRoot}/mybuild/mingw/"
+            },
+            "command": "cmake",
+            "args": [
+                "--build",
+                ".",
+                "--config",
+                "Debug"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+       
+    ]
+}

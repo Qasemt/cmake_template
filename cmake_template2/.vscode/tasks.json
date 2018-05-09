@@ -1,8 +1,23 @@
 {
     "version": "2.0.0",
     "tasks": [
+        {
+            "label": "vs64_2017_conf",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/mybuild/vs64/"
+            },
+            "command": "cmake",
+            "args": [
+                "-G",
+                "Visual Studio 15 2017 Win64",
+                   "-Dconf_BUILD_TYPE=Debug",
+                "./../../"
+            ],
+           
+        },
          {
-            "label": "vs64_conf",
+            "label": "vs64_2012_conf",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceRoot}/mybuild/vs64/"

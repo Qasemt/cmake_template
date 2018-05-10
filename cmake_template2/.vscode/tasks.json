@@ -46,6 +46,21 @@
             ],
            
         },
+           {
+            "label": "cygwin_conf",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/mybuild/cygwin/"
+            },
+            "command": "cmake",
+            "args": [
+                "-G",
+                "Unix Makefiles",
+                   "-DCMAKE_BUILD_TYPE=Debug",
+                "./../../"
+            ],
+           
+        },
         {
             "label": "vs64_build_release",
             "options": {
@@ -94,6 +109,23 @@
             "label": "mingw_build_debug",
             "options": {
                 "cwd": "${workspaceRoot}/mybuild/mingw/"
+            },
+            "command": "cmake",
+            "args": [
+                "--build",
+                ".",
+                "--config",
+                "Debug"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+		 {
+            "label": "cygwin_build_debug",
+            "options": {
+                "cwd": "${workspaceRoot}/mybuild/cygwin/"
             },
             "command": "cmake",
             "args": [

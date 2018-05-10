@@ -62,5 +62,26 @@
             "externalConsole": true,
             "preLaunchTask": "mingw_build_release",
         },
+		   {
+            "name": "SYGWIN_ DEBUG RUN",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/out/cygwin/debug/vs_test.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:\\thirdparty\\cygwin\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "cygwin_build_debug",
+        },
     ]
 }

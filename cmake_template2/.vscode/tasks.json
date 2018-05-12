@@ -62,6 +62,26 @@
            
         },
         {
+            "label": "ninja_conf",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/mybuild/ninja/"
+            },
+            "command": "cmake",
+            "args": [
+                "-G",
+                "Ninja",
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "-DCMAKE_C_COMPILER:PATH=\"D:\\LLVM\\bin\\clang.exe\" ",
+                "-DCMAKE_CXX_COMPILER:PATH=\"D:\\LLVM\\bin\\clang++.exe\" ",
+                "-DCMAKE_LINKER:PATH=\"d:\\LLVM\\bin\\lld-link.exe\" ",
+                "-DCMAKE_C_COMPILER_ID=\"Clang\"", 
+                "-DCMAKE_CXX_COMPILER_ID=\"Clang\"", 
+                "-DCMAKE_SYSTEM_NAME=\"Generic\"",
+                "./../../"
+            ]
+        },
+        {
             "label": "vs64_build_release",
             "options": {
                 "cwd": "${workspaceRoot}/mybuild/vs64/"
@@ -138,6 +158,23 @@
                 "kind": "build",
                 "isDefault": true
             }
+        }, {
+            "label": "ninja_build_debug",
+            "options": {
+                "cwd": "${workspaceRoot}/mybuild/ninja/"
+            },
+            "command": "cmake",
+            "args": [
+                "--build",
+                ".",
+                "--config",
+                "Debug"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
         }
        
     ]

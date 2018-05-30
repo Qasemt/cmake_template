@@ -2,22 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "vs64_2017_conf",
-            "type": "shell",
-            "options": {
-                "cwd": "${workspaceRoot}/mybuild/vs64/"
-            },
-            "command": "cmake",
-            "args": [
-                "-G",
-                "Visual Studio 15 2017 Win64",
-                   "-Dconf_BUILD_TYPE=Debug",
-                "./../../"
-            ],
-           
-        },
-         {
-            "label": "vs64_2012_conf",
+            "label": "vs64_conf",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceRoot}/mybuild/vs64/"
@@ -26,12 +11,11 @@
             "args": [
                 "-G",
                 "Visual Studio 11 2012 Win64",
-                   "-Dconf_BUILD_TYPE=Debug",
+                "-Dconf_BUILD_TYPE=Debug",
                 "./../../"
-            ],
-           
+            ]
         },
-         {
+        {
             "label": "mingw_conf",
             "type": "shell",
             "options": {
@@ -41,12 +25,11 @@
             "args": [
                 "-G",
                 "MinGW Makefiles",
-                   "-DCMAKE_BUILD_TYPE=Debug",
+                "-DCMAKE_BUILD_TYPE=Debug",
                 "./../../"
-            ],
-           
+            ]
         },
-           {
+        {
             "label": "cygwin_conf",
             "type": "shell",
             "options": {
@@ -56,11 +39,11 @@
             "args": [
                 "-G",
                 "Unix Makefiles",
-                   "-DCMAKE_BUILD_TYPE=Debug",
+                "-DCMAKE_BUILD_TYPE=Debug",
                 "./../../"
-            ],
-           
+            ]
         },
+        
         {
             "label": "ninja_conf",
             "type": "shell",
@@ -92,7 +75,7 @@
                 ".",
                 "--config",
                 "Release"
-                    ]
+            ]
         },
         {
             "label": "vs64_build_debug",
@@ -110,8 +93,7 @@
                 "kind": "build",
                 "isDefault": true
             }
-        }
-        ,
+        },
         {
             "label": "mingw_build_release",
             "options": {
@@ -123,7 +105,7 @@
                 ".",
                 "--config",
                 "Release"
-                    ]
+            ]
         },
         {
             "label": "mingw_build_debug",
@@ -142,7 +124,7 @@
                 "isDefault": true
             }
         },
-		 {
+        {
             "label": "cygwin_build_debug",
             "options": {
                 "cwd": "${workspaceRoot}/mybuild/cygwin/"
@@ -157,7 +139,8 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
+            "problemMatcher": []
         }, {
             "label": "ninja_build_debug",
             "options": {
@@ -176,6 +159,6 @@
             },
             "problemMatcher": []
         }
-       
+        
     ]
 }

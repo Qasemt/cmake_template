@@ -4,7 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+
         {
             "name": "VS64_DEBUG_RUN",
             "type": "cppvsdbg",
@@ -30,7 +30,7 @@
             "preLaunchTask": "vs64_build_release",
         },
         {
-            "name": "MINGW_DEBUG_RUN",
+            "name": "MINGW_ DEBUG RUN",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/out/mingw/debug/vs_test.exe",
@@ -51,7 +51,7 @@
             "preLaunchTask": "mingw_build_debug",
         },
         {
-            "name": "MINGW_RELEASE_RUN",
+            "name": "MINGW_ RELEASE RUN",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/out/mingw/release/vs_test.exe",
@@ -62,8 +62,8 @@
             "externalConsole": true,
             "preLaunchTask": "mingw_build_release",
         },
-		   {
-            "name": "SYGWIN_ DEBUG RUN",
+        {
+            "name": "CYGWIN_DEBUG_RUN",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/out/cygwin/debug/vs_test.exe",

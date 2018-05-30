@@ -2,6 +2,12 @@
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
         "typeinfo": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "iostream": "cpp",
+        "initializer_list": "cpp",
+        "type_traits": "cpp",
+        "vector": "cpp",
+        "xstring": "cpp",
+        "xutility": "cpp"
     }
 }
